@@ -178,7 +178,7 @@ const translations = {
           title: "Ndabazi App",
           description: "Application mobile avec fonctionnalités avancées",
           features: ["Interface intuitive", "Fonctionnalités personnalisées", "Performance optimisée"],
-          downloadUrl: "#",
+          downloadUrl: "https://ndabazi-8m3il.ondigitalocean.app/download/",
           status: "Disponible",
         },
       ],
@@ -816,7 +816,7 @@ export default function Portfolio() {
                           size="sm"
                           variant="outline"
                           className="border-white/30 text-white hover:bg-white/10 bg-gray-800"
-                          onClick={() => window.open("#", "_blank")}
+                          onClick={() => window.open("https://www.linkedin.com/in/niyondiko-joffre-062840277?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", "_blank")}
                         >
                           <Linkedin className="w-4 h-4" />
                         </Button>
@@ -824,7 +824,7 @@ export default function Portfolio() {
                           size="sm"
                           variant="outline"
                           className="border-white/30 text-white hover:bg-white/10 bg-gray-800"
-                          onClick={() => window.open("#", "_blank")}
+                          onClick={() => window.open("https://www.github.com/JubuNiyokoDev", "_blank")}
                         >
                           <Github className="w-4 h-4" />
                         </Button>
@@ -832,7 +832,7 @@ export default function Portfolio() {
                           size="sm"
                           variant="outline"
                           className="border-white/30 text-white hover:bg-white/10 bg-gray-800"
-                          onClick={() => window.open("#", "_blank")}
+                          onClick={() => window.open("https://www.facebook.com/jubuniyoko", "_blank")}
                         >
                           <Facebook className="w-4 h-4" />
                         </Button>
@@ -840,7 +840,7 @@ export default function Portfolio() {
                           size="sm"
                           variant="outline"
                           className="border-white/30 text-white hover:bg-white/10 bg-gray-800"
-                          onClick={() => window.open("#", "_blank")}
+                          onClick={() => window.open("https://www.instagram.com/jubu_niyoko", "_blank")}
                         >
                           <Instagram className="w-4 h-4" />
                         </Button>
@@ -848,7 +848,7 @@ export default function Portfolio() {
                           size="sm"
                           variant="outline"
                           className="border-white/30 text-white hover:bg-white/10 bg-gray-800"
-                          onClick={() => window.open("#", "_blank")}
+                          onClick={() => window.open("https://www.x.com/@jubu_niyoko", "_blank")}
                         >
                           <Twitter className="w-4 h-4" />
                         </Button>
@@ -856,7 +856,7 @@ export default function Portfolio() {
                           size="sm"
                           variant="outline"
                           className="border-white/30 text-white hover:bg-white/10 bg-gray-800"
-                          onClick={() => window.open("#", "_blank")}
+                          onClick={() => window.open("https://www.youtube.com/@JubuNiyoko", "_blank")}
                         >
                           <Youtube className="w-4 h-4" />
                         </Button>
