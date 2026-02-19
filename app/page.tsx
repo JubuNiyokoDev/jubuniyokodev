@@ -26,6 +26,9 @@ import {
   Instagram,
   Twitter,
   Youtube,
+  CalendarDays,
+  Award,
+  Users,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -79,119 +82,210 @@ const translations = {
     nav: {
       home: "Accueil",
       about: "À propos",
-      services: "Services",
+      services: "Expertises",
+      career: "Parcours",
       projects: "Projets",
       contact: "Contact",
     },
+    themeNames: {
+      corporate: "Corporate",
+      elegant: "Élégant",
+      modern: "Moderne",
+      professional: "Pro",
+    },
     hero: {
-      title: "Niyondiko Joffre",
-      subtitle: "Ingénieur en TIC • Lead Developer",
+      title: "Joffre NIYONDIKO",
+      subtitle: "Software Engineer • Backend • Mobile • IA",
       description:
-        "Bac+4 en Technologies de l'Information et de la Communication, option Génie Logiciel. Lead Developer chez Kit Digital Innovation, spécialisé en développement Web, Mobile, IA et Blockchain.",
+        "Software Engineer spécialisé en Backend Systems, Mobile Development et applications IA. Co-Founder & Lead Developer avec des applications publiées sur Google Play et des systèmes sécurisés en production.",
+      portraitAlt: "Portrait de Joffre Niyondiko",
       cta: "Voir mes projets",
     },
     promo: {
-      title: "🚀 Développement professionnel sur mesure",
-      text: "Vous cherchez une application web ou mobile professionnelle, un chatbot intelligent, un système IA ou une plateforme blockchain ? Je réalise vos projets personnalisés dans un délai de 2 semaines minimum. Contactez-moi directement par WhatsApp ou par email.",
+      title: "🚀 Portfolio professionnel & solutions sur mesure",
+      text: "Développement web/mobile, architecture backend sécurisée, intégration IA et blockchain. Approche orientée performance, sécurité et expérience utilisateur.",
       button: "Me contacter maintenant",
     },
     about: {
       title: "À propos",
+      summaryTitle: "Résumé Professionnel",
+      summaryText:
+        "Ingénieur logiciel spécialisé en systèmes backend, développement mobile et applications pilotées par l'IA. Cofondateur et Lead Developer avec une expérience pratique dans la conception et le déploiement d'applications de niveau production utilisées par de vrais utilisateurs sur Google Play. Excellente maîtrise de Django, Flutter, Supabase et des architectures d'API sécurisées. Expérience confirmée dans la conception de systèmes évolutifs, l'intégration de fonctionnalités IA, et la mise en place de plateformes sociales et fintech axées sur la confidentialité.",
       education: "Formation",
-      educationText: "Bac+4 en Technologies de l'Information et de la Communication, option Génie Logiciel",
-      position: "Poste actuel",
-      positionText: "Lead Developer chez Kit Digital Innovation (Kabondo, Bujumbura)",
-      skills: "Compétences",
+      educationText:
+        "Bachelor+4 en Technologies de l'Information et de la Communication (Génie Logiciel) - University Polytechnique of Gitega, 2025.",
+      position: "Expérience principale",
+      positionText: "Co-Founder & Lead Developer chez RundiNova Tech (Gitega) - Juin 2024 à Février 2026.",
+      skills: "Compétences clés",
       skillsList: [
-        "Développement d'applications mobiles (Flutter)",
-        "Développement web (Django, React)",
-        "Intelligence Artificielle",
-        "Chatbots",
-        "Blockchain",
-        "Déploiement cloud",
-        "API sécurisées",
-        "UI/UX design",
+        "Django, Flutter, React, Riverpod",
+        "API sécurisées, auth, cloud deployment",
+        "Supabase, PostgreSQL, Firebase, Isar",
+        "IA appliquée, Smart matching, reporting",
+        "Blockchain, smart contracts, Web3",
+        "Architecture mobile offline-first",
       ],
+      quickInfoLabels: {
+        email: "Email",
+        phone: "Téléphone",
+        location: "Localisation",
+      },
     },
     services: {
-      title: "Mes Services",
+      title: "Domaines d'Expertise",
       list: [
         {
           icon: <Smartphone className="w-8 h-8" />,
-          title: "Développement Mobile",
-          description: "Applications mobiles Flutter pour Android et iOS",
-          features: ["Interface moderne", "Performance optimisée", "Publication sur stores"],
+          title: "Ingénierie Mobile",
+          description: "Applications Flutter Android/iOS et publication sur Play Store",
+          features: ["Architecture hors ligne", "UI responsive", "Performance production"],
         },
         {
           icon: <Code className="w-8 h-8" />,
-          title: "Développement Web",
-          description: "Sites web et applications avec Django et React",
-          features: ["Design responsive", "Sécurité renforcée", "SEO optimisé"],
+          title: "Systèmes Backend",
+          description: "Architectures Django robustes et APIs REST sécurisées",
+          features: ["Scalabilité", "Sécurité API", "Auth & flux de données"],
         },
         {
           icon: <Brain className="w-8 h-8" />,
-          title: "Intelligence Artificielle",
-          description: "Solutions IA et chatbots intelligents",
-          features: ["Chatbots personnalisés", "Traitement du langage", "Intégration API"],
+          title: "IA appliquée",
+          description: "Fonctionnalités IA pour matching, signalement et analytics",
+          features: ["Fonctionnalités IA", "Reporting intelligent", "Automatisation"],
         },
         {
           icon: <Shield className="w-8 h-8" />,
           title: "Blockchain",
-          description: "Développement blockchain et smart contracts",
-          features: ["Smart contracts", "DApps", "Sécurité blockchain"],
+          description: "Composants blockchain et smart contracts pour transactions sûres",
+          features: ["Smart contracts", "Flux de confiance", "Prêt pour Web3"],
         },
+      ],
+    },
+    career: {
+      title: "Parcours Professionnel",
+      experienceTitle: "Expérience",
+      experienceRole: "Co-Founder & Lead Developer",
+      experienceCompany: "RundiNova Tech - Gitega",
+      experiencePeriod: "Juin 2024 - Février 2026",
+      experienceItems: [
+        "Cofondation d'une startup technologique livrant des solutions Web, Mobile, IA et Blockchain.",
+        "Conception et déploiement de systèmes backend évolutifs avec Django et des APIs REST sécurisées.",
+        "Pilotage du développement mobile Flutter (Android & iOS), de l'architecture à la mise en production.",
+        "Intégration de fonctionnalités IA incluant des systèmes de matching intelligent et de reporting avancé.",
+        "Architecture de composants blockchain et smart contracts pour des plateformes de transactions sécurisées.",
+        "Gestion complète du cycle projet: besoins, UI/UX, développement, déploiement et maintenance.",
+      ],
+      certificationsTitle: "Certifications",
+      certifications: [
+        "Artificial Intelligence & Blockchain Innovation Program - JuneTech, 2024",
+        "Leadership Skills Training - The Global Leadership Summit, 2024",
+        "Blockchain Training Certificate - TresorAcademy, 2023",
+        "Electronics & Arduino Development Training - TME, 2023",
+      ],
+      courseworkTitle: "Cours académiques",
+      coursework: [
+        "Database Systems - University Polytechnique of Gitega, 2023 (SQL & Database Design)",
+        "Computer Systems & Architecture - University Polytechnique of Gitega, 2022 (Problem Solving)",
+      ],
+      involvementTitle: "Implication",
+      involvementRole: "GDG Lead (Google Developer Groups Lead)",
+      involvementOrg: "University Polytechnique of Gitega / GDG",
+      involvementPeriod: "Juin 2023 - Juin 2025",
+      involvementItems: [
+        "Direction du chapitre universitaire Google Developer Groups (GDG).",
+        "Organisation d'ateliers techniques sur Flutter, le développement web et le cloud.",
+        "Mentorat des étudiants en développement mobile et backend.",
+        "Coordination d'événements tech et de meetups développeurs.",
+      ],
+      stackTitle: "Stack Technique",
+      skillGroups: [
+        "Langages: Python, Dart, Solidity, SQL",
+        "Backend & DB: PostgreSQL, Supabase, Firebase, REST APIs, Isar",
+        "Cloud & Déploiement: API Security, Authentication, Push Notifications",
+        "IA & Blockchain: Machine Learning, AI Systems, Smart Contracts, Web3",
       ],
     },
     projects: {
       title: "Projets",
+      featuresLabel: "Fonctionnalités",
+      techLabel: "Technologies",
+      visitLabel: "Visiter",
+      storeLabel: "Google Play",
       list: [
         {
           id: "comlab",
-          title: "ComLab",
+          title: "ComLab - Online Collaboration Platform",
           description:
-            "Plateforme complète de mise en relation entre talents, experts, mentors, startups, entreprises et ONG.",
-          features: [
-            "Matching intelligent",
-            "Formations certifiées",
-            "Multilingue (FR/EN/KR)",
-            "Accompagnement projets",
-          ],
-          url: "https://comlab-burundi.com",
+            "Plateforme complète reliant talents, experts, mentors, startups, entreprises et ONG.",
+          features: ["Matching intelligent", "Formations certifiées", "Multilingue FR/EN/KR", "Support projets"],
+          tech: ["Django", "Flutter", "Supabase", "AI Integration"],
+          url: "https://comlab-burundi.com/",
           status: "En ligne",
         },
         {
           id: "techsafe",
-          title: "TechSafe",
-          description: "Application mobile avec IA pour lutter contre la violence basée sur le genre (VBG).",
-          features: ["Signalement intelligent", "Alerte d'urgence", "Interface en Kirundi", "Information juridique"],
+          title: "TechSafe - AI Mobile App for GBV Prevention",
+          description: "Application mobile IA pour signalement et alertes en prévention des VBG.",
+          features: ["Smart reporting", "Emergency alerts", "Interface Kirundi", "Information juridique"],
+          tech: ["Flutter", "AI models", "Supabase"],
+          url: "https://techsafe.com/",
           status: "En développement",
+        },
+        {
+          id: "storytus",
+          title: "Storytus - Social Status / Story Sharing App",
+          description:
+            "App sociale mobile avec statuts texte/image/audio, privacy control, repost, mentions, hashtags et analytics.",
+          features: ["Commentaires & likes", "Favoris", "Notifications", "Multilingue FR/EN/KR"],
+          tech: ["Flutter", "Supabase", "Firebase", "Realtime DB"],
+          downloadUrl: "https://play.google.com/store/apps/details?id=com.storytus.storytus",
+          status: "Publié",
+        },
+        {
+          id: "ikigabo",
+          title: "Ikigabo - Personal Wealth Management",
+          description: "Application offline de gestion financière personnelle publiée sur Google Play.",
+          features: ["Transactions", "Actifs & dettes", "Multi-devise", "PIN & biométrie"],
+          tech: ["Flutter", "Isar", "Riverpod", "fl_chart"],
+          downloadUrl: "https://play.google.com/store/apps/details?id=com.ikigabo.ikigabo",
+          status: "Publié",
         },
         {
           id: "iwanje",
-          title: "Iwanje",
-          description: "Plateforme e-commerce avec blockchain intégrée pour services, produits, immobilier.",
-          features: ["Géolocalisation", "Filtres IA intelligents", "Paiements sécurisés", "Multi-vendeurs"],
+          title: "Iwanje - E-commerce Platform with Blockchain",
+          description: "Plateforme multi-vendeurs intégrant blockchain et filtres IA pour transactions sécurisées.",
+          features: ["Géolocalisation", "Listings", "Paiements sécurisés", "Multi-vendeurs"],
+          tech: ["Flutter", "Django", "Smart Contracts", "AI filters"],
+          url: "https://iwanje.com/",
           status: "En développement",
         },
         {
-          id: "ndabazi",
-          title: "Ndabazi App",
-          description: "Application mobile avec fonctionnalités avancées",
-          features: ["Interface intuitive", "Fonctionnalités personnalisées", "Performance optimisée"],
-          downloadUrl: "https://ndabazi-8m3il.ondigitalocean.app/download/",
-          status: "Disponible",
+          id: "imbonakazoza",
+          title: "Imbonakazoza - Android Maps App",
+          description:
+            "Application Android pour localiser les agents d'argent électronique en temps réel avec Google Maps SDK.",
+          features: ["Markers temps réel", "Satellite/normal", "Zoom/pan/rotation", "UI responsive"],
+          tech: ["Kotlin", "Jetpack Compose", "Google Maps SDK 18.2.0"],
+          downloadUrl: "https://play.google.com/store/apps/details?id=com.kithub.imbonakazoza",
+          status: "Publié",
         },
       ],
     },
     contact: {
       title: "Contact",
-      subtitle: "Discutons de votre projet",
+      subtitle: "Disponible pour collaborations et projets professionnels",
+      infoTitle: "Informations",
       form: {
         name: "Nom",
         email: "Email",
         subject: "Sujet",
         message: "Message",
         send: "Envoyer",
+        placeholders: {
+          name: "Votre nom",
+          email: "votre@email.com",
+          subject: "Sujet",
+          message: "Votre message...",
+        },
       },
       info: {
         email: "Email",
@@ -200,119 +294,216 @@ const translations = {
       },
       whatsapp: "WhatsApp",
       social: "Réseaux sociaux",
+      footerRights: "Tous droits réservés.",
     },
   },
   en: {
     nav: {
       home: "Home",
       about: "About",
-      services: "Services",
+      services: "Expertise",
+      career: "Career",
       projects: "Projects",
       contact: "Contact",
     },
+    themeNames: {
+      corporate: "Corporate",
+      elegant: "Elegant",
+      modern: "Modern",
+      professional: "Pro",
+    },
     hero: {
-      title: "Niyondiko Joffre",
-      subtitle: "ICT Engineer • Lead Developer",
+      title: "Joffre NIYONDIKO",
+      subtitle: "Software Engineer • Backend • Mobile • AI",
       description:
-        "Bachelor+4 in Information and Communication Technologies, Software Engineering option. Lead Developer at Kit Digital Innovation, specialized in Web, Mobile, AI and Blockchain development.",
+        "Software Engineer specialized in Backend Systems, Mobile Development and AI-driven applications. Co-Founder & Lead Developer with production-grade apps published on Google Play.",
+      portraitAlt: "Portrait of Joffre Niyondiko",
       cta: "View my projects",
     },
     promo: {
-      title: "🚀 Professional custom development",
-      text: "Looking for a professional web or mobile application, intelligent chatbot, AI system or blockchain platform? I deliver your custom projects within a minimum of 2 weeks. Contact me directly via WhatsApp or email.",
+      title: "🚀 Professional Portfolio & Custom Solutions",
+      text: "Web/mobile development, secure backend architecture, AI integration, and blockchain components with a focus on performance and reliability.",
       button: "Contact me now",
     },
     about: {
       title: "About",
+      summaryTitle: "Professional Summary",
+      summaryText:
+        "Software Engineer specialized in Backend Systems, Mobile Development and AI-driven applications. Co-Founder and Lead Developer with hands-on experience building and deploying production-grade applications used by real users on Google Play. Strong expertise in Django, Flutter, Supabase, and secure API architecture. Experienced in designing scalable systems, integrating AI features, and implementing privacy-focused social and fintech platforms.",
       education: "Education",
-      educationText: "Bachelor+4 in Information and Communication Technologies, Software Engineering option",
-      position: "Current Position",
-      positionText: "Lead Developer at Kit Digital Innovation (Kabondo, Bujumbura)",
-      skills: "Skills",
+      educationText:
+        "Bachelor+4 in Information and Communication Technologies (Software Engineering) - University Polytechnique of Gitega, 2025.",
+      position: "Main Experience",
+      positionText: "Co-Founder & Lead Developer at RundiNova Tech (Gitega) - June 2024 to February 2026.",
+      skills: "Core Strengths",
       skillsList: [
-        "Mobile app development (Flutter)",
-        "Web development (Django, React)",
-        "Artificial Intelligence",
-        "Chatbots",
-        "Blockchain",
-        "Cloud deployment",
-        "Secure APIs",
-        "UI/UX design",
+        "Django, Flutter, React, Riverpod",
+        "Secure APIs, auth, cloud deployment",
+        "Supabase, PostgreSQL, Firebase, Isar",
+        "Applied AI, smart matching, reporting",
+        "Blockchain, smart contracts, Web3",
+        "Offline-first mobile architecture",
       ],
+      quickInfoLabels: {
+        email: "Email",
+        phone: "Phone",
+        location: "Location",
+      },
     },
     services: {
-      title: "My Services",
+      title: "Expertise Areas",
       list: [
         {
           icon: <Smartphone className="w-8 h-8" />,
-          title: "Mobile Development",
-          description: "Flutter mobile applications for Android and iOS",
-          features: ["Modern interface", "Optimized performance", "Store publication"],
+          title: "Mobile Engineering",
+          description: "Flutter Android/iOS applications with production delivery",
+          features: ["Offline-first", "Responsive UI", "Store-ready"],
         },
         {
           icon: <Code className="w-8 h-8" />,
-          title: "Web Development",
-          description: "Websites and applications with Django and React",
-          features: ["Responsive design", "Enhanced security", "SEO optimized"],
+          title: "Backend Systems",
+          description: "Robust Django architecture and secure REST APIs",
+          features: ["Scalable", "API Security", "Auth & data flow"],
         },
         {
           icon: <Brain className="w-8 h-8" />,
-          title: "Artificial Intelligence",
-          description: "AI solutions and intelligent chatbots",
-          features: ["Custom chatbots", "Language processing", "API integration"],
+          title: "Applied AI",
+          description: "AI capabilities for matching, reporting, and insights",
+          features: ["AI features", "Smart reporting", "Automation"],
         },
         {
           icon: <Shield className="w-8 h-8" />,
           title: "Blockchain",
-          description: "Blockchain development and smart contracts",
-          features: ["Smart contracts", "DApps", "Blockchain security"],
+          description: "Blockchain components and smart contracts for secure transactions",
+          features: ["Smart contracts", "Trust flows", "Web3-ready"],
         },
+      ],
+    },
+    career: {
+      title: "Professional Path",
+      experienceTitle: "Experience",
+      experienceRole: "Co-Founder & Lead Developer",
+      experienceCompany: "RundiNova Tech - Gitega",
+      experiencePeriod: "June 2024 - February 2026",
+      experienceItems: [
+        "Co-founded a technology startup delivering Web, Mobile, AI and Blockchain solutions to clients.",
+        "Designed and deployed scalable backend systems using Django and secure REST APIs.",
+        "Led mobile app development with Flutter (Android & iOS) from architecture to production release.",
+        "Integrated AI-driven features including smart matching systems and intelligent reporting tools.",
+        "Architected blockchain components and smart contracts for secure transaction platforms.",
+        "Managed full lifecycle: requirements, UI/UX, development, deployment and maintenance.",
+      ],
+      certificationsTitle: "Certifications",
+      certifications: [
+        "Artificial Intelligence & Blockchain Innovation Program - JuneTech, 2024",
+        "Leadership Skills Training - The Global Leadership Summit, 2024",
+        "Blockchain Training Certificate - TresorAcademy, 2023",
+        "Electronics & Arduino Development Training - TME, 2023",
+      ],
+      courseworkTitle: "Coursework",
+      coursework: [
+        "Database Systems - University Polytechnique of Gitega, 2023 (SQL & Database Design)",
+        "Computer Systems & Architecture - University Polytechnique of Gitega, 2022 (Problem Solving)",
+      ],
+      involvementTitle: "Involvement",
+      involvementRole: "GDG Lead (Google Developer Groups Lead)",
+      involvementOrg: "University Polytechnique of Gitega / GDG",
+      involvementPeriod: "June 2023 - June 2025",
+      involvementItems: [
+        "Led the university chapter of Google Developer Groups (GDG).",
+        "Organized technical workshops on Flutter, Web Development, and Cloud technologies.",
+        "Mentored students in mobile and backend development.",
+        "Coordinated tech events and developer meetups.",
+      ],
+      stackTitle: "Skills Stack",
+      skillGroups: [
+        "Programming Languages: Python, Dart, Solidity, SQL",
+        "Backend & DB: PostgreSQL, Supabase, Firebase, REST APIs, Isar",
+        "Cloud & Deployment: API Security, Authentication, Push Notifications",
+        "AI & Blockchain: Machine Learning, AI Systems, Smart Contracts, Web3",
       ],
     },
     projects: {
       title: "Projects",
+      featuresLabel: "Features",
+      techLabel: "Technologies",
+      visitLabel: "Visit",
+      storeLabel: "Google Play",
       list: [
         {
           id: "comlab",
-          title: "ComLab",
-          description: "Complete platform connecting talents, experts, mentors, startups, companies and NGOs.",
-          features: ["Smart matching", "Certified training", "Multilingual (FR/EN/KR)", "Project support"],
-          url: "https://comlab-burundi.com",
-          status: "Online",
+          title: "ComLab - Online Collaboration Platform",
+          description:
+            "Complete platform connecting talents, experts, mentors, startups, companies, and NGOs.",
+          features: ["Smart matching", "Certified training", "Multilingual FR/EN/KR", "Project support"],
+          tech: ["Django", "Flutter", "Supabase", "AI Integration"],
+          url: "https://comlab-burundi.com/",
+          status: "Live",
         },
         {
           id: "techsafe",
-          title: "TechSafe",
-          description: "Mobile application with AI to fight against gender-based violence (GBV).",
-          features: ["Smart reporting", "Emergency alert", "Kirundi interface", "Legal information"],
+          title: "TechSafe - AI Mobile App for GBV Prevention",
+          description: "Mobile AI app for gender-based violence reporting and emergency alerts.",
+          features: ["Smart reporting", "Emergency alerts", "Kirundi interface", "Legal information"],
+          tech: ["Flutter", "AI models", "Supabase"],
+          url: "https://techsafe.com/",
           status: "In development",
+        },
+        {
+          id: "storytus",
+          title: "Storytus - Social Status / Story Sharing App",
+          description:
+            "Social app with text/image/audio statuses, privacy controls, reposts, mentions, hashtags and analytics.",
+          features: ["Comments & likes", "Bookmarks", "Notifications", "Multilingual FR/EN/KR"],
+          tech: ["Flutter", "Supabase", "Firebase", "Realtime DB"],
+          downloadUrl: "https://play.google.com/store/apps/details?id=com.storytus.storytus",
+          status: "Published",
+        },
+        {
+          id: "ikigabo",
+          title: "Ikigabo - Personal Wealth Management",
+          description: "Offline personal finance app published on Google Play.",
+          features: ["Transactions", "Assets & debts", "Multi-currency", "PIN & biometrics"],
+          tech: ["Flutter", "Isar", "Riverpod", "fl_chart"],
+          downloadUrl: "https://play.google.com/store/apps/details?id=com.ikigabo.ikigabo",
+          status: "Published",
         },
         {
           id: "iwanje",
-          title: "Iwanje",
-          description: "E-commerce platform with integrated blockchain for services, products, real estate.",
-          features: ["Geolocation", "Smart AI filters", "Secure payments", "Multi-vendor"],
+          title: "Iwanje - E-commerce Platform with Blockchain",
+          description: "Multi-vendor platform integrating blockchain and AI-powered filters.",
+          features: ["Geolocation", "Listings", "Secure payments", "Multi-vendor"],
+          tech: ["Flutter", "Django", "Smart Contracts", "AI filters"],
+          url: "https://iwanje.com/",
           status: "In development",
         },
         {
-          id: "ndabazi",
-          title: "Ndabazi App",
-          description: "Mobile application with advanced features",
-          features: ["Intuitive interface", "Custom features", "Optimized performance"],
-          downloadUrl: "#",
-          status: "Available",
+          id: "imbonakazoza",
+          title: "Imbonakazoza - Android Maps App",
+          description: "Android app to locate electronic money agents in real time with Google Maps SDK.",
+          features: ["Realtime markers", "Satellite/normal", "Zoom/pan/rotation", "Responsive UI"],
+          tech: ["Kotlin", "Jetpack Compose", "Google Maps SDK 18.2.0"],
+          downloadUrl: "https://play.google.com/store/apps/details?id=com.kithub.imbonakazoza",
+          status: "Published",
         },
       ],
     },
     contact: {
       title: "Contact",
-      subtitle: "Let's discuss your project",
+      subtitle: "Available for professional collaborations and technical projects",
+      infoTitle: "Information",
       form: {
         name: "Name",
         email: "Email",
         subject: "Subject",
         message: "Message",
         send: "Send",
+        placeholders: {
+          name: "Your name",
+          email: "your@email.com",
+          subject: "Subject",
+          message: "Your message...",
+        },
       },
       info: {
         email: "Email",
@@ -321,13 +512,14 @@ const translations = {
       },
       whatsapp: "WhatsApp",
       social: "Social Networks",
+      footerRights: "All rights reserved.",
     },
   },
 }
 
 export default function Portfolio() {
-  const [language, setLanguage] = useState<"fr" | "en">("fr")
-  const [currentTheme, setCurrentTheme] = useState<keyof typeof themes>("corporate")
+  const [language, setLanguage] = useState<"fr" | "en">("en")
+  const [currentTheme, setCurrentTheme] = useState<keyof typeof themes>("professional")
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const t = translations[language]
@@ -372,9 +564,10 @@ export default function Portfolio() {
                 <button
                   key={key}
                   onClick={() => setCurrentTheme(key as keyof typeof themes)}
-                  className={`p-2 rounded text-sm transition-all ${currentTheme === key ? "bg-white/20 text-white" : "text-gray-400 hover:text-white"
-                    }`}
-                  title={themeData.name}
+                  className={`p-2 rounded text-sm transition-all ${
+                    currentTheme === key ? "bg-white/20 text-white" : "text-gray-400 hover:text-white"
+                  }`}
+                  title={t.themeNames[key as keyof typeof t.themeNames]}
                 >
                   {themeData.icon}
                 </button>
@@ -430,58 +623,67 @@ export default function Portfolio() {
 
       {/* Hero Section */}
       <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Subtle Background Animation */}
+        {/* Water-like Background Animation */}
         <div className="absolute inset-0">
-          {[...Array(6)].map((_, i) => (
+          {[...Array(5)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute rounded-full bg-white/5 blur-xl"
+              className="absolute rounded-full bg-white/5 blur-2xl"
               style={{
-                width: `${200 + i * 50}px`,
-                height: `${200 + i * 50}px`,
-                left: `${20 + i * 15}%`,
-                top: `${10 + i * 15}%`,
+                width: `${220 + i * 70}px`,
+                height: `${220 + i * 70}px`,
+                left: `${5 + i * 20}%`,
+                top: `${8 + i * 10}%`,
               }}
               animate={{
-                x: [0, 50, -50, 0],
-                y: [0, -30, 30, 0],
-                scale: [1, 1.1, 0.9, 1],
+                x: [0, 30, -20, 0],
+                y: [0, -20, 15, 0],
+                scale: [1, 1.08, 0.95, 1],
               }}
               transition={{
-                duration: 20 + i * 5,
+                duration: 16 + i * 4,
                 repeat: Number.POSITIVE_INFINITY,
                 ease: "easeInOut",
               }}
             />
           ))}
+
+          <motion.div
+            className="absolute -bottom-28 left-[-12%] h-56 w-[124%] rounded-[48%] bg-cyan-400/10 blur-3xl"
+            animate={{ x: [0, 50, -30, 0], y: [0, -10, 6, 0] }}
+            transition={{ duration: 18, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+          />
+          <motion.div
+            className="absolute -bottom-36 left-[-8%] h-64 w-[118%] rounded-[48%] bg-blue-400/10 blur-3xl"
+            animate={{ x: [0, -40, 25, 0], y: [0, -14, 8, 0] }}
+            transition={{ duration: 22, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+          />
         </div>
 
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
             <div
-              className={`mx-auto mb-4 rounded-full shadow-2xl inline-block border-4 border-white`}
+              className="mx-auto mb-4 rounded-full shadow-2xl inline-block border-4 border-white"
               style={{
-                display: 'inline-block',
-                overflow: 'hidden',
-                background: 'linear-gradient(135deg, #1fa2ff, #12d8fa, #a6ffcb)',
-                width: '160px',
-                height: '160px',
+                display: "inline-block",
+                overflow: "hidden",
+                background: "linear-gradient(135deg, #1fa2ff, #12d8fa, #a6ffcb)",
+                width: "160px",
+                height: "160px",
               }}
             >
               <img
                 src="./joffre.jpg"
-                alt="Portrait de Joffre"
+                alt={t.hero.portraitAlt}
                 style={{
-                  borderRadius: '50%',
-                  display: 'block',
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'fill',
+                  borderRadius: "50%",
+                  display: "block",
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "fill",
                 }}
               />
             </div>
-
-
 
             <h1 className="text-5xl md:text-7xl font-bold mb-4 text-white">{t.hero.title}</h1>
 
@@ -545,14 +747,20 @@ export default function Portfolio() {
             <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }}>
               <Card className={`${theme.card} backdrop-blur-md h-full`}>
                 <CardContent className="p-8">
-                  <div className="flex items-center mb-6">
+                  <div className="flex items-center mb-4">
+                    <Briefcase className={`w-8 h-8 ${theme.text} mr-3`} />
+                    <h3 className={`text-2xl font-bold ${theme.text}`}>{t.about.summaryTitle}</h3>
+                  </div>
+                  <p className="text-gray-300 mb-8 leading-relaxed">{t.about.summaryText}</p>
+
+                  <div className="flex items-center mb-4">
                     <GraduationCap className={`w-8 h-8 ${theme.text} mr-3`} />
                     <h3 className={`text-2xl font-bold ${theme.text}`}>{t.about.education}</h3>
                   </div>
                   <p className="text-gray-300 mb-8 leading-relaxed">{t.about.educationText}</p>
 
-                  <div className="flex items-center mb-6">
-                    <Briefcase className={`w-8 h-8 ${theme.text} mr-3`} />
+                  <div className="flex items-center mb-4">
+                    <CalendarDays className={`w-8 h-8 ${theme.text} mr-3`} />
                     <h3 className={`text-2xl font-bold ${theme.text}`}>{t.about.position}</h3>
                   </div>
                   <p className="text-gray-300 leading-relaxed">{t.about.positionText}</p>
@@ -570,7 +778,7 @@ export default function Portfolio() {
                         key={index}
                         initial={{ opacity: 0, x: -10 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ delay: index * 0.1 }}
+                        transition={{ delay: index * 0.08 }}
                         className="flex items-center text-gray-300"
                       >
                         <div className={`w-2 h-2 ${theme.gradient} rounded-full mr-3`} />
@@ -578,6 +786,27 @@ export default function Portfolio() {
                       </motion.li>
                     ))}
                   </ul>
+
+                  <div className="mt-10 grid sm:grid-cols-2 gap-4">
+                    <div className="rounded-lg border border-white/20 p-4 bg-black/20">
+                      <p className="text-xs uppercase tracking-wide text-gray-400 mb-1">
+                        {t.about.quickInfoLabels.email}
+                      </p>
+                      <p className="text-sm text-white">niyondikojoffreasjubu@gmail.com</p>
+                    </div>
+                    <div className="rounded-lg border border-white/20 p-4 bg-black/20">
+                      <p className="text-xs uppercase tracking-wide text-gray-400 mb-1">
+                        {t.about.quickInfoLabels.phone}
+                      </p>
+                      <p className="text-sm text-white">+257 68497372</p>
+                    </div>
+                    <div className="rounded-lg border border-white/20 p-4 bg-black/20 sm:col-span-2">
+                      <p className="text-xs uppercase tracking-wide text-gray-400 mb-1">
+                        {t.about.quickInfoLabels.location}
+                      </p>
+                      <p className="text-sm text-white">Gitega, Gitega Province, Burundi</p>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             </motion.div>
@@ -622,8 +851,114 @@ export default function Portfolio() {
         </div>
       </section>
 
+      {/* Career Section */}
+      <section id="career" className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">{t.career.title}</h2>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-2 gap-8 mb-8">
+            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }}>
+              <Card className={`${theme.card} backdrop-blur-md h-full`}>
+                <CardContent className="p-8">
+                  <div className="flex items-center mb-4">
+                    <Briefcase className={`w-8 h-8 ${theme.text} mr-3`} />
+                    <h3 className={`text-2xl font-bold ${theme.text}`}>{t.career.experienceTitle}</h3>
+                  </div>
+                  <p className="text-white font-semibold text-lg">{t.career.experienceRole}</p>
+                  <p className="text-gray-300">{t.career.experienceCompany}</p>
+                  <p className="text-gray-400 text-sm mb-6">{t.career.experiencePeriod}</p>
+
+                  <ul className="space-y-3">
+                    {t.career.experienceItems.map((item, idx) => (
+                      <li key={idx} className="flex items-start text-sm text-gray-300">
+                        <CheckCircle className={`w-4 h-4 ${theme.text} mr-2 mt-0.5 flex-shrink-0`} />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }}>
+              <Card className={`${theme.card} backdrop-blur-md h-full`}>
+                <CardContent className="p-8">
+                  <div className="flex items-center mb-4">
+                    <Award className={`w-8 h-8 ${theme.text} mr-3`} />
+                    <h3 className={`text-2xl font-bold ${theme.text}`}>{t.career.certificationsTitle}</h3>
+                  </div>
+                  <ul className="space-y-3 mb-8">
+                    {t.career.certifications.map((item, idx) => (
+                      <li key={idx} className="flex items-start text-sm text-gray-300">
+                        <CheckCircle className={`w-4 h-4 ${theme.text} mr-2 mt-0.5 flex-shrink-0`} />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="flex items-center mb-4">
+                    <Code className={`w-8 h-8 ${theme.text} mr-3`} />
+                    <h3 className={`text-2xl font-bold ${theme.text}`}>{t.career.courseworkTitle}</h3>
+                  </div>
+                  <ul className="space-y-3">
+                    {t.career.coursework.map((item, idx) => (
+                      <li key={idx} className="flex items-start text-sm text-gray-300">
+                        <CheckCircle className={`w-4 h-4 ${theme.text} mr-2 mt-0.5 flex-shrink-0`} />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8">
+            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }}>
+              <Card className={`${theme.card} backdrop-blur-md h-full`}>
+                <CardContent className="p-8">
+                  <div className="flex items-center mb-4">
+                    <Users className={`w-8 h-8 ${theme.text} mr-3`} />
+                    <h3 className={`text-2xl font-bold ${theme.text}`}>{t.career.involvementTitle}</h3>
+                  </div>
+                  <p className="text-white font-semibold text-lg">{t.career.involvementRole}</p>
+                  <p className="text-gray-300">{t.career.involvementOrg}</p>
+                  <p className="text-gray-400 text-sm mb-6">{t.career.involvementPeriod}</p>
+                  <ul className="space-y-3">
+                    {t.career.involvementItems.map((item, idx) => (
+                      <li key={idx} className="flex items-start text-sm text-gray-300">
+                        <CheckCircle className={`w-4 h-4 ${theme.text} mr-2 mt-0.5 flex-shrink-0`} />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }}>
+              <Card className={`${theme.card} backdrop-blur-md h-full`}>
+                <CardContent className="p-8">
+                  <h3 className={`text-2xl font-bold mb-6 ${theme.text}`}>{t.career.stackTitle}</h3>
+                  <ul className="space-y-3">
+                    {t.career.skillGroups.map((item, idx) => (
+                      <li key={idx} className="flex items-start text-sm text-gray-300">
+                        <CheckCircle className={`w-4 h-4 ${theme.text} mr-2 mt-0.5 flex-shrink-0`} />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Projects Section */}
-      <section id="projects" className="py-20">
+      <section id="projects" className="py-20 bg-black/10">
         <div className="container mx-auto px-4">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">{t.projects.title}</h2>
@@ -635,20 +970,21 @@ export default function Portfolio() {
                 key={project.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
+                transition={{ delay: index * 0.08 }}
               >
-                <Card className={`${theme.card} backdrop-blur-md hover:scale-105 transition-all duration-300 h-full`}>
+                <Card className={`${theme.card} backdrop-blur-md hover:scale-[1.02] transition-all duration-300 h-full`}>
                   <CardContent className="p-8">
-                    <div className="flex justify-between items-start mb-4">
+                    <div className="flex justify-between items-start mb-4 gap-3">
                       <h3 className={`text-2xl font-bold ${theme.text}`}>{project.title}</h3>
                       <Badge
                         variant="outline"
-                        className={`${project.status === "En ligne" || project.status === "Online"
-                          ? "border-green-400 text-green-400"
-                          : project.status === "Disponible" || project.status === "Available"
-                            ? "border-blue-400 text-blue-400"
-                            : "border-yellow-400 text-yellow-400"
-                          }`}
+                        className={`${
+                          project.status === "En ligne" || project.status === "Live"
+                            ? "border-green-400 text-green-400"
+                            : project.status === "Publié" || project.status === "Published"
+                              ? "border-blue-400 text-blue-400"
+                              : "border-yellow-400 text-yellow-400"
+                        }`}
                       >
                         {project.status}
                       </Badge>
@@ -657,7 +993,7 @@ export default function Portfolio() {
                     <p className="text-gray-300 mb-6 leading-relaxed">{project.description}</p>
 
                     <div className="mb-6">
-                      <h4 className={`font-semibold mb-3 ${theme.text}`}>Fonctionnalités:</h4>
+                      <h4 className={`font-semibold mb-3 ${theme.text}`}>{t.projects.featuresLabel}:</h4>
                       <ul className="space-y-2">
                         {project.features.map((feature, idx) => (
                           <li key={idx} className="flex items-center text-sm text-gray-400">
@@ -668,24 +1004,35 @@ export default function Portfolio() {
                       </ul>
                     </div>
 
-                    <div className="flex gap-3">
+                    <div className="mb-6">
+                      <h4 className={`font-semibold mb-3 ${theme.text}`}>{t.projects.techLabel}:</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {project.tech.map((item, idx) => (
+                          <Badge key={idx} variant="outline" className="border-white/20 text-gray-200">
+                            {item}
+                          </Badge>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="flex gap-3 flex-wrap">
                       {project.url && (
                         <Button
-                          className={`flex-1 ${theme.gradient} hover:opacity-90 text-white`}
+                          className={`${theme.gradient} hover:opacity-90 text-white`}
                           onClick={() => window.open(project.url, "_blank")}
                         >
                           <ExternalLink className="w-4 h-4 mr-2" />
-                          Visiter
+                          {t.projects.visitLabel}
                         </Button>
                       )}
                       {project.downloadUrl && (
                         <Button
                           variant="outline"
-                          className="flex-1 border-white/30 text-white hover:bg-white/10 bg-green-800"
+                          className="border-white/30 text-white hover:bg-white/10 bg-green-800"
                           onClick={() => window.open(project.downloadUrl, "_blank")}
                         >
                           <Download className="w-4 h-4 mr-2" />
-                          APK
+                          {t.projects.storeLabel}
                         </Button>
                       )}
                     </div>
@@ -717,7 +1064,7 @@ export default function Portfolio() {
                         <input
                           type="text"
                           className="w-full px-4 py-3 bg-black/20 border border-white/20 rounded-lg focus:outline-none focus:border-blue-400 text-white"
-                          placeholder="Votre nom"
+                          placeholder={t.contact.form.placeholders.name}
                         />
                       </div>
 
@@ -726,7 +1073,7 @@ export default function Portfolio() {
                         <input
                           type="email"
                           className="w-full px-4 py-3 bg-black/20 border border-white/20 rounded-lg focus:outline-none focus:border-blue-400 text-white"
-                          placeholder="votre@email.com"
+                          placeholder={t.contact.form.placeholders.email}
                         />
                       </div>
 
@@ -735,7 +1082,7 @@ export default function Portfolio() {
                         <input
                           type="text"
                           className="w-full px-4 py-3 bg-black/20 border border-white/20 rounded-lg focus:outline-none focus:border-blue-400 text-white"
-                          placeholder="Sujet"
+                          placeholder={t.contact.form.placeholders.subject}
                         />
                       </div>
 
@@ -744,14 +1091,11 @@ export default function Portfolio() {
                         <textarea
                           rows={5}
                           className="w-full px-4 py-3 bg-black/20 border border-white/20 rounded-lg focus:outline-none focus:border-blue-400 text-white resize-none"
-                          placeholder="Votre message..."
+                          placeholder={t.contact.form.placeholders.message}
                         />
                       </div>
 
-                      <Button
-                        type="submit"
-                        className={`w-full ${theme.gradient} hover:opacity-90 py-4 text-lg text-white`}
-                      >
+                      <Button type="submit" className={`w-full ${theme.gradient} hover:opacity-90 py-4 text-lg text-white`}>
                         <Mail className="mr-2 w-5 h-5" />
                         {t.contact.form.send}
                       </Button>
@@ -764,17 +1108,14 @@ export default function Portfolio() {
               <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }}>
                 <Card className={`${theme.card} backdrop-blur-md h-full`}>
                   <CardContent className="p-8">
-                    <h3 className={`text-2xl font-bold mb-8 ${theme.text}`}>Informations</h3>
+                    <h3 className={`text-2xl font-bold mb-8 ${theme.text}`}>{t.contact.infoTitle}</h3>
 
                     <div className="space-y-6">
                       <div className="flex items-center">
                         <Mail className={`w-6 h-6 mr-4 ${theme.text}`} />
                         <div>
                           <p className="text-sm text-gray-400">{t.contact.info.email}</p>
-                          <a
-                            href="mailto:niyondikojoffreasjubu@gmail.com"
-                            className="text-white hover:text-blue-300 font-medium"
-                          >
+                          <a href="mailto:niyondikojoffreasjubu@gmail.com" className="text-white hover:text-blue-300 font-medium">
                             niyondikojoffreasjubu@gmail.com
                           </a>
                         </div>
@@ -794,7 +1135,7 @@ export default function Portfolio() {
                         <MapPin className={`w-6 h-6 mr-4 ${theme.text}`} />
                         <div>
                           <p className="text-sm text-gray-400">{t.contact.info.location}</p>
-                          <p className="text-white font-medium">Gitega</p>
+                          <p className="text-white font-medium">Gitega, Gitega Province, Burundi</p>
                         </div>
                       </div>
                     </div>
@@ -811,12 +1152,14 @@ export default function Portfolio() {
 
                     <div className="mt-8">
                       <h4 className={`font-semibold mb-4 ${theme.text}`}>{t.contact.social}</h4>
-                      <div className="flex space-x-3">
+                      <div className="flex flex-wrap gap-3">
                         <Button
                           size="sm"
                           variant="outline"
                           className="border-white/30 text-white hover:bg-white/10 bg-gray-800"
-                          onClick={() => window.open("https://www.linkedin.com/in/niyondiko-joffre-062840277?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", "_blank")}
+                          onClick={() =>
+                            window.open("https://www.linkedin.com/in/niyondiko-joffre-062840277", "_blank")
+                          }
                         >
                           <Linkedin className="w-4 h-4" />
                         </Button>
@@ -848,7 +1191,7 @@ export default function Portfolio() {
                           size="sm"
                           variant="outline"
                           className="border-white/30 text-white hover:bg-white/10 bg-gray-800"
-                          onClick={() => window.open("https://www.x.com/@jubu_niyoko", "_blank")}
+                          onClick={() => window.open("https://x.com/jubu_niyoko", "_blank")}
                         >
                           <Twitter className="w-4 h-4" />
                         </Button>
@@ -860,7 +1203,6 @@ export default function Portfolio() {
                         >
                           <Youtube className="w-4 h-4" />
                         </Button>
-
                       </div>
                     </div>
                   </CardContent>
@@ -874,7 +1216,7 @@ export default function Portfolio() {
       {/* Footer */}
       <footer className="py-8 bg-black/60 border-t border-white/10">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-gray-400">© 2025 Niyondiko Joffre. Tous droits réservés.</p>
+          <p className="text-gray-400">© 2026 Niyondiko Joffre. {t.contact.footerRights}</p>
         </div>
       </footer>
     </div>
